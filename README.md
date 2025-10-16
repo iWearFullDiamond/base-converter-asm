@@ -39,6 +39,13 @@ This project demonstrates:
 
 ---
 
+## 🖼️ Demo
+Example of the program running in TASM/TLINK environment:
+
+![Base Converter demo in VS Code](docs/demo_base_converter.png)
+
+---
+
 ## 🖥️ Code Structure
 src/base_converter_2_36.asm      ; main program
 .vscode/tasks.json               ; optional VS Code build task
