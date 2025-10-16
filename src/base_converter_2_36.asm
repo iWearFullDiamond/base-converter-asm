@@ -9,6 +9,7 @@
     msg1 db 13,10, "Introdu primul numar (intre 0 si 65,535) : $"
     msg2 db 13,10, "Introdu baza in care sa fie schimbat numarul (2 .. 36)  : $"
     msg3 db 13,10, "Baza introdusa este gresita! $"
+    msg4 db 13,10, "Rezultatul este : ", '$'
 
 .code
 
@@ -137,12 +138,21 @@ OglindireStiva:
     MOV nr, AX
     PUSH DX
     CMP nr, 0
-    JE AfisareNr
+    JE PregatireRezultat
     JMP OglindireStiva
+
+
+PregatireRezultat:
+    ;Afisam msg4
+    MOV DX, OFFSET msg4
+    MOV AH, 09h
+    INT 21h   
+    JMP AfisareNr
 
 AfisareNr:
     POP AX
-    CMP AX, 9
+    XOR AH, AH
+    CMP Al, 9
     JA Litera
     ADD al, '0'
     MOV dl, al
