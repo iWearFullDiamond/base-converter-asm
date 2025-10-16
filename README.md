@@ -58,8 +58,8 @@ README.md
 ---
 
 ## 👩‍💻 Author
-**iWearFullDiamond**
-Second-year Informatics Student @ CSIE-ASE
+**iWearFullDiamond**<br>
+Second-year Informatics Student @ CSIE-ASE<br>
 Passionate about low-level programming, cybersecurity, and Linux systems.
 
 ---
